@@ -9,17 +9,26 @@ import EditBannerTemplateBs from "./components/EditBannerTemplateBs";
 const Home: React.FC = () => {
   const [ads, setAds] = useState(adsData);
   const [selectedAd, setSelectedAd] = useState('');
-  const [isEditOpen, setIsEdidOpen] = useState<boolean>(false);
+  const [isEditOpen, setIsEditOpen] = useState<boolean>(true);
 
   const handleEditOpen = (ad: any)=>{
     setSelectedAd(ad);
-    setIsEdidOpen(true);
+    setIsEditOpen(true);
   }
+
+  const handleEditClose = () => {
+    setIsEditOpen(false);
+    setSelectedAd('');
+  };
+
+  const handleSave = (updatedAd: any) => {
+    setAds(ads.map(ad => ad.id === updatedAd.id ? updatedAd : ad));
+  };
 
 
   return (
-    <div  className="w-full">
-      {/* <div className=" mt-5 w-full grid grid-cols-2 px-52 gap-x-2 gap-y-2 mb-5">
+    <div className=" h-screen relative">
+      <div className="pt-5 w-full grid grid-cols-2 px-52 gap-x-2 gap-y-2 pb-5">
         {
           ads.map(ad => (
             <BannerImageComp
@@ -30,12 +39,23 @@ const Home: React.FC = () => {
               image={ad.image}
               bannerImage={ad.bannerImage}
               onEdit={() => handleEditOpen(ad)}
+              noEdit={false}
             />
           ))
         }
-      </div> */}
-      <EditBannerTemplateBs/>
+      </div>
+      {selectedAd && (
+        <div className="w-full fixed top-0 h-full">
+          <EditBannerTemplateBs
+            open={isEditOpen}
+            onClose={handleEditClose}
+            onSave={handleSave}
+            bannerData={selectedAd}
+          />
+        </div>
+      )}
     </div>
+
   );
 }
 export default Home
