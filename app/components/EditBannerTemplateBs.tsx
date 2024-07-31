@@ -13,11 +13,14 @@ const EditBannerTemplateBs:React.FC<EditBannerTemplateBsProps> = ({ open, onClos
 
     const [title, setTitle] = useState<string>(bannerData?.title || '');
     const [description, setDescription] = useState<string>(bannerData?.description || '');
-    const [cta, setCta] = useState<string>(bannerData?.cta || '');  
-
+    const [cta, setCta] = useState<string>(bannerData?.cta || ''); 
+    const [color, setColor] = useState<string>(bannerData?.textColor || '');
+    const colorOptions = [
+        'text-white', 'text-red-500', 'text-blue-500', 'text-green-500', 'text-yellow-500', 'text-black'
+    ]
 
     const handleSubmit = () => {
-        const newData = {...bannerData, title, description, cta};
+        const newData = {...bannerData, title, description, cta, textColor: color};
         onSave(newData);
         onClose()
     };
@@ -39,6 +42,7 @@ const EditBannerTemplateBs:React.FC<EditBannerTemplateBsProps> = ({ open, onClos
                     cta={cta}
                     image={bannerData.image}
                     noEdit={true}
+                    textColor={color}
                 />
 
                 <p className="font-bold mb-1 mt-4">Title</p>
@@ -68,15 +72,29 @@ const EditBannerTemplateBs:React.FC<EditBannerTemplateBsProps> = ({ open, onClos
                     onChange={e => setCta(e.target.value)}
                     name="cta"
                 />
-                <div className="flex">
+
+                <p className="font-bold mt-3">Change Text color</p>
+                <div className="flex gap-2">
+                    {
+                        colorOptions.map(color=>(
+                            <div
+                                key={color}
+                                className={`${color.replace('text-', 'bg-')} w-6 h-6 rounded-full cursor-pointer border-[1px] border-black`}
+                                onClick={()=>setColor(color)}
+                            ></div>
+                        ))
+                    }
+                </div>
+
+                <div className="flex mt-3">
                     <div 
-                        className="mt-3 rounded px-4 py-1 cursor-pointer bg-blue-600 w-max text-white hover:bg-blue-700"
+                        className="rounded px-4 py-1 cursor-pointer bg-blue-600 w-max text-white hover:bg-blue-700"
                         onClick={handleSubmit}
                     >
                         Submit
                     </div>
                     <div 
-                        className="mt-3 rounded px-4 py-1 cursor-pointer bg-red-600 w-max text-white ml-2 hover:bg-red-700"
+                        className="rounded px-4 py-1 cursor-pointer bg-red-600 w-max text-white ml-2 hover:bg-red-700"
                         onClick={handleCancel}
                     >
                         Cancel

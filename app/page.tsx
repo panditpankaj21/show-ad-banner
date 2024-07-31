@@ -38,6 +38,7 @@ const Home: React.FC = () => {
               cta={ad.cta}
               image={ad.image}
               bannerImage={ad.bannerImage}
+              textColor={ad.textColor}
               onEdit={() => handleEditOpen(ad)}
               noEdit={false}
             />

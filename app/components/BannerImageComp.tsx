@@ -7,11 +7,14 @@ interface BannerImageCompProps{
     cta:string;
     image: string;
     noEdit: boolean;
+    textColor: string;
     onEdit?: ()=>void;
 }
 
 const BannerImageComp: React.FC<BannerImageCompProps>  = (props)=>{
-    const {title, description, bannerImage, cta, image, onEdit, noEdit} = props;
+    const {title, description, bannerImage, cta, image, onEdit, noEdit, textColor} = props;
+
+    console.log(textColor);
     return(
         <div>
             <div className="relative">
@@ -19,7 +22,7 @@ const BannerImageComp: React.FC<BannerImageCompProps>  = (props)=>{
                 src={bannerImage} 
                 className="w-full h-60"
                 />
-                <div className=" absolute top-5 left-4 w-48">
+                <div className={`absolute top-5 ${textColor} left-4 w-48`}>
                     <p className="text-2xl font-bold mb-3 leading-6">{title}</p>
                     <p className="text-sm">{description}</p>
                 </div>

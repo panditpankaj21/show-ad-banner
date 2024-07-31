@@ -5,102 +5,16 @@
       "description": "Harness AI for Effective Campaigns",
       "cta": "Learn More",
       "image": "/ad1.jpg",
-      "bannerImage":"https://bannerbot-public.s3.ap-south-1.amazonaws.com/templates/1/square.png"
+      "bannerImage":"https://bannerbot-public.s3.ap-south-1.amazonaws.com/templates/5/square.png",
+      "textColor":"text-yellow-500"
     },
     {
       "id": 2,
       "title": "Boost Your Leads",
       "description": "Harness AI for Effective Campaigns",
       "cta": "Learn More",
-      "image": "/ad1.jpg",
+      "image": "/ad2.jpg",
       "bannerImage":"https://bannerbot-public.s3.ap-south-1.amazonaws.com/templates/1/square.png"
-    },
-    {
-      "id": 3,
-      "title": "Boost Your Leads",
-      "description": "Harness AI for Effective Campaigns",
-      "cta": "Learn More",
-      "image": "/ad1.jpg",
-      "bannerImage":"https://bannerbot-public.s3.ap-south-1.amazonaws.com/templates/1/square.png"
-    },
-    {
-      "id": 4,
-      "title": "Boost Your Leads",
-      "description": "Harness AI for Effective Campaigns",
-      "cta": "Learn More",
-      "image": "/ad1.jpg",
-      "bannerImage":"https://bannerbot-public.s3.ap-south-1.amazonaws.com/templates/1/square.png"
-    },
-    {
-      "id": 5,
-      "title": "Boost Your Leads",
-      "description": "Harness AI for Effective Campaigns",
-      "cta": "Learn More",
-      "image": "/ad1.jpg",
-      "bannerImage":"https://bannerbot-public.s3.ap-south-1.amazonaws.com/templates/1/square.png"
-    },
-    {
-      "id": 6,
-      "title": "Boost Your Leads",
-      "description": "Harness AI for Effective Campaigns",
-      "cta": "Learn More",
-      "image": "/ad1.jpg",
-      "bannerImage":"https://bannerbot-public.s3.ap-south-1.amazonaws.com/templates/1/square.png"
-    },
-    {
-      "id": 7,
-      "title": "Boost Your Leads",
-      "description": "Harness AI for Effective Campaigns",
-      "cta": "Learn More",
-      "image": "/ad1.jpg",
-      "bannerImage":"https://bannerbot-public.s3.ap-south-1.amazonaws.com/templates/1/square.png"
-    },
-    {
-      "id": 8,
-      "title": "Boost Your Leads",
-      "description": "Harness AI for Effective Campaigns",
-      "cta": "Learn More",
-      "image": "/ad1.jpg",
-      "bannerImage":"https://bannerbot-public.s3.ap-south-1.amazonaws.com/templates/1/square.png"
-    },
-    {
-      "id": 9,
-      "title": "Boost Your Leads",
-      "description": "Harness AI for Effective Campaigns",
-      "cta": "Learn More",
-      "image": "/ad1.jpg",
-      "bannerImage":"https://bannerbot-public.s3.ap-south-1.amazonaws.com/templates/1/square.png"
-    },
-    {
-      "id": 10,
-      "title": "Boost Your Leads",
-      "description": "Harness AI for Effective Campaigns",
-      "cta": "Learn More",
-      "image": "/ad1.jpg",
-      "bannerImage":"https://bannerbot-public.s3.ap-south-1.amazonaws.com/templates/1/square.png"
-    },
-    {
-      "id": 11,
-      "title": "Boost Your Leads",
-      "description": "Harness AI for Effective Campaigns",
-      "cta": "Learn More",
-      "image": "/ad1.jpg",
-      "bannerImage":"https://bannerbot-public.s3.ap-south-1.amazonaws.com/templates/1/square.png"
-    },
-    {
-      "id": 12,
-      "title": "Boost Your Leads",
-      "description": "Harness AI for Effective Campaigns",
-      "cta": "Learn More",
-      "image": "/ad1.jpg",
-      "bannerImage":"https://bannerbot-public.s3.ap-south-1.amazonaws.com/templates/1/square.png"
-    },
-    {
-      "id": 13,
-      "title": "Boost Your Leads",
-      "description": "Harness AI for Effective Campaigns",
-      "cta": "Learn More",
-      "image": "/ad1.jpg",
-      "bannerImage":"https://bannerbot-public.s3.ap-south-1.amazonaws.com/templates/1/square.png"
+      ,"textColor":"text-black"
     }
 ]
