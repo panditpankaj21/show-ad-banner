@@ -1,4 +1,5 @@
 import React from "react"
+import Image from "next/image";
 
 interface BannerImageCompProps{
     title: string;
@@ -14,15 +15,23 @@ interface BannerImageCompProps{
 const BannerImageComp: React.FC<BannerImageCompProps>  = (props)=>{
     const {title, description, bannerImage, cta, image, onEdit, noEdit, textColor} = props;
 
-    console.log(textColor);
     return(
         <div>
             <div className="relative">
                 <img 
-                src={bannerImage} 
-                className="w-full h-60"
+                    src={bannerImage} 
+                    className="w-full h-60" 
                 />
-                <div className={`absolute top-5 ${textColor} left-4 w-48`}>
+                <div className="absolute bottom-2 right-2"><Image
+                    src={image}
+                    width={200}
+                    height={200}
+                    alt="inner image"
+                /></div>
+                <div 
+                    style={{"color": textColor}}
+                    className={`absolute top-5 left-4 w-48`}
+                >
                     <p className="text-2xl font-bold mb-3 leading-6">{title}</p>
                     <p className="text-sm">{description}</p>
                 </div>

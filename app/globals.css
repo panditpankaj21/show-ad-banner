@@ -25,3 +25,14 @@ body {
     text-wrap: balance;
   }
 }
+
+.scrollBar {
+  overflow: auto;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;  /* Internet Explorer 10+ */
+}
+
+/* Hide scrollbar for Edge, Internet Explorer 10/11 */
+.scrollBar::-webkit-scrollbar {
+  display: none; /* Safari and Chrome */
+}

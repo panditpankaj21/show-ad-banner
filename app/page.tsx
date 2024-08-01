@@ -27,8 +27,8 @@ const Home: React.FC = () => {
 
 
   return (
-    <div className=" h-screen relative">
-      <div className="pt-5 w-full grid grid-cols-2 px-52 gap-x-2 gap-y-2 pb-5">
+    <div className=" h-screen relative scrollBar">
+      <div className="pt-10 w-full grid grid-cols-2 px-52 gap-x-2 gap-y-2 pb-10">
         {
           ads.map(ad => (
             <BannerImageComp
